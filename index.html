@@ -1,5 +1,138 @@
 <html>
-<body>
-<p>Website?</p>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+      }
+      header {
+        text-align: center;
+        background-image: linear-gradient(135deg, #2374AB,rgb(98, 61, 109));
+        color: #fff;
+        padding: 40px 16px;
+      }
+      header h1 img {
+        animation:wiggle 30s ease-in-out infinite;
+      }
+      @keyframes wiggle {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(30deg); }
+        100% { transform: rotate(0deg); }
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0;
+        font-size: 60px;
+      }
+      h2 {
+        margin: 1em 0;
+        font-size: 24px;
+      }
+      video {
+        width:320px;
+        float: left;
+        border: 1px solid black;
+        margin-right: 1em;
+      }
+      div.ex {
+        padding-bottom: 2em;
+      }
+      .ex p {
+        style="text-align: justify"
+      }
+      header .btn {
+        max-width: 35em;
+        margin: auto auto;
+      }
+      header .btn a {
+        display: inline-block;
+        border-color: rgba(255,255,255,0.2);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0.3rem;
+        padding: 0.2rem 1rem;
+        min-width: 7em;
+        margin-left: 1ch;
+        margin-right: 1ch;
+        margin-bottom: 1ch;
+        color: rgba(255,255,255,0.8);
+        background-color: rgba(255,255,255,0.1);
+        transition: color 0.1s, background-color 0.1s, border-color 0.1s;
+        text-decoration: none;
+        outline: none;
+      }
+      header a.btn:hover {
+        color: rgba(255,255,255,1);
+        background-color: rgba(255,255,255,0.2);
+      }
+      header a.btn:visited {
+        text-decoration: none;
+        outline: none;
+      }
+      header .social {
+        padding-top: 20px;
+      }
+      header .social img {
+        height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://github.com/reanimate/reanimate" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: fixed; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <article>
+      <header>
+        <!-- <h1><img width="100px" src="reanimate-logo.svg"/></h1> -->
+        <h1>Reanimate</h1>
+        <h2>Build declarative animations with SVG and Haskell</h2>
+        <div class="btn">
+          <a class="btn" href="https://github.com/reanimate/reanimate">GitHub</a>
+          <a class="btn" href="https://hackage.haskell.org/package/reanimate/docs/Reanimate.html">API reference</a>
+          <a class="btn" href="https://reanimate.readthedocs.io/en/latest/?badge=latest">Documentation</a>
+          <a class="btn" href="https://github.com/sponsors/Lemmih">Sponsor</a>
+          <a class="btn">Playground</a>
+          <a class="btn" href="https://discord.gg/Qs28Dv6">Discord</a>
+        </div>
+        <div class="social">
+          <a href="https://github.com/reanimate/reanimate/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/reanimate/reanimate"></a>
+        </div>
+      </header>
+      <main>
+        <h2>Reanimate</h2>
+        <p>Main article here.</p>
+        <h2>Examples</h2> 
+        <div class="ex">
+          <video muted autoplay loop>
+            <source src="media/demo_tangent.mp4">
+          </video>
+          <p><a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_tangent.hs">demo_tangent.hs</a></p>
+          <p>
+            Explanation. Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+          </p>
+        </div>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/tut_glue_fourier.mp4">
+          </video>
+          <p>Explanation2. Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+            Explanation. Explanation. Explanation. Explanation. 
+          </p>
+        </div>
+
+        <p style="clear: both;">More stuff</p>
+      </main>
+    </article>
+  </body>
 </html>
