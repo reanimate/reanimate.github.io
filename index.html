@@ -2,6 +2,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Reanimate</title>
+  <meta name="description" content="High-level introduction to the Reanimate animation library."/>
   <style>
     body {
       margin: 0;
@@ -168,6 +170,7 @@
     }
 
     @media (orientation: landscape) {
+
       /* header .btn a {
         display: inline-block !important;
       } */
@@ -176,19 +179,23 @@
         min-width: 10em;
       }
     }
+
     @media (orientation: portrait) {
       li b {
         display: block;
       }
+
       video {
         width: 100%;
         float: none;
         border: 1px solid black;
         margin: 0;
       }
+
       header .btn a {
         display: block;
       }
+
       /* main div img {
         padding-top: 1em;
       } */
@@ -203,8 +210,6 @@
         animation: octocat-wave 560ms ease-in-out
       }
     }
-
-    
   </style>
 </head>
 
@@ -545,8 +550,8 @@
         }
         configureHandlers();
         // Ugly hack to fix the layout after an orientation change.
-        window.onorientationchange = function() {
-            window.location.reload();
+        window.onorientationchange = function () {
+          window.location.reload();
         };
       </script>
     </main>
