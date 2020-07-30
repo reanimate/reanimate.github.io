@@ -20,9 +20,9 @@
       padding: 40px 16px;
     }
 
-    header h1 img {
+    /* header h1 img {
       animation: wiggle 30s ease-in-out infinite;
-    }
+    } */
 
     @keyframes wiggle {
       0% {
@@ -39,8 +39,10 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
+      padding-left: 1em;
+      padding-right: 1em;
     }
 
     main video:hover {
@@ -78,7 +80,9 @@
     }
 
     header .btn {
+      padding-top: 1em;
       max-width: 35em;
+      max-width: 900px;
       margin: auto auto;
 
     }
@@ -94,7 +98,8 @@
       border-width: 1px;
       border-radius: 0.3rem;
       padding: 0.2rem 1rem;
-      min-width: 7em;
+      /* min-width: 7em; */
+      min-width: 10em;
       margin-left: 1ch;
       margin-right: 1ch;
       margin-bottom: 1ch;
@@ -162,6 +167,24 @@
       padding-bottom: 1em;
     }
 
+    @media (orientation: portrait) {
+      li b {
+        display: block !important;
+      }
+      video {
+        width: 100%;
+        float: none;
+        border: 1px solid black;
+        margin: 0;
+      }
+      header .btn a {
+        display: block !important;
+      }
+      /* main div img {
+        padding-top: 1em;
+      } */
+    }
+
     @media (max-width:500px) {
       .github-corner:hover .octo-arm {
         animation: none
@@ -213,7 +236,10 @@
     <main>
       <h2><span style="color: #2374AB;">Reanimate</span> is:</h2>
       <ul>
-        <li><b>An animation library:</b> Animations are written as code.</li>
+        <li>
+          <b>An animation library:</b>
+          Animations are written as code.
+        </li>
         <li><b>Written in Haskell:</b> High-level, purely functional, expressive.</li>
         <li><b>Based on SVG:</b> Powerful and introspective.</li>
         <li><b>Cross-platform:</b> Windows, MacOS, and Linux.</li>
@@ -247,10 +273,10 @@
           <source src="media/demo_tangent.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_tangent.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_tangent.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Reanimate is built on vector graphics, including support for intro&shy;spection.
           This example ani&shy;mation shows the letter <kbd>'S'</kbd>, and the tangent and normal of each
           point along the curve.
@@ -265,10 +291,10 @@
           <source src="media/tut_glue_fourier.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_fourier.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_fourier.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           The combination of vector graphics and Haskell's expressiveness makes
           reanimate particularly well suited for rendering mathematical illustrations.
           In this example, a fourier series is used to increasingly approximate the
@@ -284,10 +310,10 @@
           <source src="media/map.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/videos/map-projection/gif.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/videos/map-projection/gif.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           With the full power of Haskell, manipulating GeoJSON data becomes easy. This
           example shows country borders being distorted by a range of map projections.
         </p>
@@ -301,10 +327,10 @@
           <source src="media/stars.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_stars.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_stars.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Starfield. This example was inspired by a pixel-based shader. Many pixel-based
           effects can be easily vectorized without having to resort to pixmaps.
         </p>
@@ -318,10 +344,10 @@
           <source src="media/latex.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_latex.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_latex.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           While SVG has built-in support for text, it's heavily dependent
           on available system fonts and does not support typesetting.
           Fortunately, LaTeX can produce SVGs and integrates directly
@@ -337,10 +363,10 @@
           <source src="media/physics.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_physics.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_physics.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Animating with Haskell means you have access to a large number of code
           libraries. In the spirit of being a batteries-included
           framework, reanimate ships with a built-in 2D physics library, called
@@ -357,10 +383,10 @@
           <source src="media/povray.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           All the videos above have demonstrated 2D vector graphics. But reanimate
           is capable of much more with the help of external programs. In this video,
           the ray-tracer Povray is used to apply 3D trans&shy;formations to the
@@ -376,10 +402,10 @@
           <source src="media/povray_ortho.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray_ortho.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray_ortho.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Mixing 2D and 3D graphics with pixel-perfect precision can be
           difficult when using a regular, perspective camera. A perspective
           camera changes sizes and angles, making it complicated to predict
@@ -399,10 +425,10 @@
           <source src="media/potrace.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_potrace.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_potrace.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           With povray, we can project our vector graphics into a 3D
           world and get beautiful, pixel-based images. If we want to
           apply further vector transformations then we have to convert
@@ -419,10 +445,10 @@
           <source src="media/default_cube.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/blender_default_cube.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/blender_default_cube.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Blender is an amazingly powerful tool for 3D graphics and it is entirely
           scriptable with Python. Reanimate offers built-in support for moving
           vector graphics into Blender, running custom scripts, and then merging
@@ -439,10 +465,10 @@
           <source src="media/blender.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_blender.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_blender.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Animated vector graphics are projected on to a 9-by-16 plane. This plane
           is then morphed into a sphere and rotated. The blender script to achieve
           this may appear fairly complex but was created using the blender GUI which
@@ -458,10 +484,10 @@
           <source src="media/fe_morph.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_morph.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_morph.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
           Vector graphics (be they in 2D or 3D) can easily look cold and hard with
           straight lines and mathematically defined curves being dominant. For a
           more organic feel, SVG filter effects can be used to merge shapes and colors.
@@ -476,11 +502,11 @@
           <source src="media/fe_bleed.hd.mp4">
         </video>
 
-        <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_bleed.hs">
-          <img src="external-link.svg" alt="View source code" align="right" />
-        </a>
         <p>
-          Psychedelic Octopus Cat.<br/>
+          <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_bleed.hs">
+            <img src="external-link.svg" alt="View source code" align="right" />
+          </a>
+          Psychedelic Octopus Cat.<br />
           Filter effects are powerful and versatile enough that the limiting
           factor is imagination.
         </p>
