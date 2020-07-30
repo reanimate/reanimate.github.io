@@ -167,9 +167,18 @@
       padding-bottom: 1em;
     }
 
+    @media (orientation: landscape) {
+      /* header .btn a {
+        display: inline-block !important;
+      } */
+      li b {
+        display: inline-block;
+        min-width: 10em;
+      }
+    }
     @media (orientation: portrait) {
       li b {
-        display: block !important;
+        display: block;
       }
       video {
         width: 100%;
@@ -178,7 +187,7 @@
         margin: 0;
       }
       header .btn a {
-        display: block !important;
+        display: block;
       }
       /* main div img {
         padding-top: 1em;
@@ -195,10 +204,7 @@
       }
     }
 
-    li b {
-      min-width: 10em;
-      display: inline-block;
-    }
+    
   </style>
 </head>
 
@@ -538,6 +544,10 @@
           }
         }
         configureHandlers();
+        // Ugly hack to fix the layout after an orientation change.
+        window.onorientationchange = function() {
+            window.location.reload();
+        };
       </script>
     </main>
   </article>
