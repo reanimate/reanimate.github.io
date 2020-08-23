@@ -3,214 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Reanimate</title>
-  <meta name="description" content="High-level introduction to the Reanimate animation library."/>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      font-size: 18px;
-    }
+  <meta name="description" content="High-level introduction to the Reanimate animation library." />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.js"
+    integrity="sha512-H5RyE1jRbGn8d0dsSstZi0SSs23X6Hkkf5hLneEIFyCfP/cBwJ/jFJESBuFBiUyzbGZGa06tnrvw1SboRKdwcA=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/mode/haskell/haskell.min.js"
+    integrity="sha512-oOdg3fdacCLYkvreThQx4i+lslUn27SGRFyjQOyE5M+KaM3vPJNyLDjU82LEkMup6PTWPrpFt7zkiBBGSZLEbg=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.56.0/codemirror.min.css"
+    integrity="sha512-/BlxZbYLtYGExexketXsTi47eHp+r2kTeq2OHecQPZlfbc7WFXVrwbVW9HOYjI6c9Ti+P60ASmVLxittZ0EBGw=="
+    crossorigin="anonymous" />
 
-    p {
-      text-align: justify;
-    }
-
-    header {
-      text-align: center;
-      background-image: linear-gradient(135deg, #2374AB, rgb(98, 61, 109));
-      color: #fff;
-      padding: 40px 16px;
-    }
-
-    /* header h1 img {
-      animation: wiggle 30s ease-in-out infinite;
-    } */
-
-    @keyframes wiggle {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      50% {
-        transform: rotate(30deg);
-      }
-
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-
-    main video:hover {
-      cursor: pointer;
-    }
-
-    main div {
-      clear: both;
-      padding-bottom: 2em;
-      min-height: 180px;
-      style="text-align: justify"
-    }
-
-    main div img {
-      padding-left: 2em;
-      padding-bottom: 1em;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 60px;
-    }
-
-    h2 {
-      margin: 1em 0;
-      font-size: 34px;
-      margin-bottom: 0;
-    }
-
-    video {
-      width: 320px;
-      float: left;
-      border: 1px solid black;
-      margin-right: 1em;
-    }
-
-    header .btn {
-      padding-top: 1em;
-      max-width: 35em;
-      max-width: 900px;
-      margin: auto auto;
-
-    }
-
-    header .disabled {
-      visibility: hidden;
-    }
-
-    header .btn a {
-      display: inline-block;
-      border-color: rgba(255, 255, 255, 0.2);
-      border-style: solid;
-      border-width: 1px;
-      border-radius: 0.3rem;
-      padding: 0.2rem 1rem;
-      /* min-width: 7em; */
-      min-width: 10em;
-      margin-left: 1ch;
-      margin-right: 1ch;
-      margin-bottom: 1ch;
-      color: rgba(255, 255, 255, 0.8);
-      background-color: rgba(255, 255, 255, 0.1);
-      transition: color 0.1s, background-color 0.1s, border-color 0.1s;
-      text-decoration: none;
-      outline: none;
-    }
-
-    header a.btn:hover {
-      color: rgba(255, 255, 255, 1);
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    header a.btn:visited {
-      text-decoration: none;
-      outline: none;
-    }
-
-    header .social {
-      padding-top: 20px;
-    }
-
-    header .social img {
-      height: 1.5em;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .large {
-      /* display: inline; */
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .github-corner:hover .octo-arm {
-      animation: octocat-wave 560ms ease-in-out
-    }
-
-    @keyframes octocat-wave {
-
-      0%,
-      100% {
-        transform: rotate(0)
-      }
-
-      20%,
-      60% {
-        transform: rotate(-25deg)
-      }
-
-      40%,
-      80% {
-        transform: rotate(10deg)
-      }
-    }
-
-    li {
-      padding-bottom: 1em;
-    }
-
-    @media (orientation: landscape) {
-
-      /* header .btn a {
-        display: inline-block !important;
-      } */
-      li b {
-        display: inline-block;
-        min-width: 10em;
-      }
-    }
-
-    @media (orientation: portrait) {
-      li b {
-        display: block;
-      }
-
-      video {
-        width: 100%;
-        float: none;
-        border: 1px solid black;
-        margin: 0;
-      }
-
-      header .btn a {
-        display: block;
-      }
-
-      /* main div img {
-        padding-top: 1em;
-      } */
-    }
-
-    @media (max-width:500px) {
-      .github-corner:hover .octo-arm {
-        animation: none
-      }
-
-      .github-corner .octo-arm {
-        animation: octocat-wave 560ms ease-in-out
-      }
-    }
-  </style>
+  <script src="https://reanimate.github.io/reanimate/playground/snippets.js"></script>
+  <script src="https://reanimate.github.io/reanimate/playground/embed.js"></script>
+  <script src="https://reanimate.github.io/reanimate/playground/elm.js"></script>
+  <script src="https://reanimate.github.io/reanimate/playground/playground.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://reanimate.github.io/reanimate/playground/embed.css">
 </head>
 
 <body>
@@ -236,7 +46,7 @@
         <a class="btn" href="https://hackage.haskell.org/package/reanimate/docs/Reanimate.html">API reference</a>
         <a class="btn" href="https://reanimate.readthedocs.io/en/latest/?badge=latest">Documentation</a>
         <a class="btn" href="https://github.com/sponsors/Lemmih">Sponsor</a>
-        <a class="btn disabled">Playground</a>
+        <a class="btn" href="https://reanimate.github.io/reanimate/playground/">Playground</a>
         <a class="btn" href="https://discord.gg/Qs28Dv6">Discord</a>
       </div>
       <div class="social">
@@ -270,257 +80,285 @@
         reanimate's API is not yet stable and may change in the future.
         If you have any questions, feel free to ask in our discord server.
       </p>
+
+
+
+
+
+      <h2>Try it live:</h2>
+      <p>
+        Play with reanimate here.
+      </p>
+      <pre class="playground-code"></pre>
+
+      <script>
+        var code = snippets[0].code; // default
+        for(var i=0;i<snippets.length;i++) {
+          if(snippets[i].title === 'Try it live') {
+            code = snippets[i].code;
+            break;
+          }
+        }
+        embedPlaygroundCode(document.querySelector('.playground-code'), code);
+      </script>
+
+
+
+
+
       <h2>Showcase</h2>
       <p>
         The best way to understand what reanimate does is to see it in action. Click on the
         videos below to view them in high-definition. Click again to close the high-definition video.
       </p>
       <br />
-      <div>
-        <video muted autoplay loop>
-          <source src="media/demo_tangent.mp4">
-        </video>
-        <video id="tangent" class="hidden large" muted loop>
-          <source src="media/demo_tangent.hd.mp4">
-        </video>
+      <div class="showcase">
+        <div>
+          <video muted autoplay loop>
+            <source src="media/demo_tangent.mp4">
+          </video>
+          <video id="tangent" class="hidden large" muted loop>
+            <source src="media/demo_tangent.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_tangent.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Reanimate is built on vector graphics, including support for intro&shy;spection.
-          This example ani&shy;mation shows the letter <kbd>'S'</kbd>, and the tangent and normal of each
-          point along the curve.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_tangent.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Reanimate is built on vector graphics, including support for intro&shy;spection.
+            This example ani&shy;mation shows the letter <kbd>'S'</kbd>, and the tangent and normal of each
+            point along the curve.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/tut_glue_fourier.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/tut_glue_fourier.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/tut_glue_fourier.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/tut_glue_fourier.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_fourier.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          The combination of vector graphics and Haskell's expressiveness makes
-          reanimate particularly well suited for rendering mathematical illustrations.
-          In this example, a fourier series is used to increasingly approximate the
-          shape of pi.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_fourier.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            The combination of vector graphics and Haskell's expressiveness makes
+            reanimate particularly well suited for rendering mathematical illustrations.
+            In this example, a fourier series is used to increasingly approximate the
+            shape of pi.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/map.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/map.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/map.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/map.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/videos/map-projection/gif.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          With the full power of Haskell, manipulating GeoJSON data becomes easy. This
-          example shows country borders being distorted by a range of map projections.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/videos/map-projection/gif.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            With the full power of Haskell, manipulating GeoJSON data becomes easy. This
+            example shows country borders being distorted by a range of map projections.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/stars.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/stars.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/stars.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/stars.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_stars.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Starfield. This example was inspired by a pixel-based shader. Many pixel-based
-          effects can be easily vectorized without having to resort to pixmaps.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/demo_stars.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Starfield. This example was inspired by a pixel-based shader. Many pixel-based
+            effects can be easily vectorized without having to resort to pixmaps.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/latex.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/latex.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/latex.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/latex.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_latex.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          While SVG has built-in support for text, it's heavily dependent
-          on available system fonts and does not support typesetting.
-          Fortunately, LaTeX can produce SVGs and integrates directly
-          with reanimate.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_latex.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            While SVG has built-in support for text, it's heavily dependent
+            on available system fonts and does not support typesetting.
+            Fortunately, LaTeX can produce SVGs and integrates directly
+            with reanimate.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/physics.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/physics.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/physics.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/physics.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_physics.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Animating with Haskell means you have access to a large number of code
-          libraries. In the spirit of being a batteries-included
-          framework, reanimate ships with a built-in 2D physics library, called
-          Chipmunk&shy;2D. The video to the left demonstrates how SVG shapes can be used
-          nearly effortlessly in a physics simulation.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_physics.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Animating with Haskell means you have access to a large number of code
+            libraries. In the spirit of being a batteries-included
+            framework, reanimate ships with a built-in 2D physics library, called
+            Chipmunk&shy;2D. The video to the left demonstrates how SVG shapes can be used
+            nearly effortlessly in a physics simulation.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/povray.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/povray.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/povray.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/povray.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          All the videos above have demonstrated 2D vector graphics. But reanimate
-          is capable of much more with the help of external programs. In this video,
-          the ray-tracer Povray is used to apply 3D trans&shy;formations to the
-          LaTeX animation.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            All the videos above have demonstrated 2D vector graphics. But reanimate
+            is capable of much more with the help of external programs. In this video,
+            the ray-tracer Povray is used to apply 3D trans&shy;formations to the
+            LaTeX animation.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/povray_ortho.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/povray_ortho.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/povray_ortho.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/povray_ortho.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray_ortho.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Mixing 2D and 3D graphics with pixel-perfect precision can be
-          difficult when using a regular, perspective camera. A perspective
-          camera changes sizes and angles, making it complicated to predict
-          where a 3D object will appear on the screen.
-          But switch out the perspective camera with an orthographic camera and
-          it becomes trivial to align 2D and 3D objects.
-          This example renders a sphere with an orthographic camera. Notice
-          how the symbols stay the same size even as they move into the background.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_povray_ortho.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Mixing 2D and 3D graphics with pixel-perfect precision can be
+            difficult when using a regular, perspective camera. A perspective
+            camera changes sizes and angles, making it complicated to predict
+            where a 3D object will appear on the screen.
+            But switch out the perspective camera with an orthographic camera and
+            it becomes trivial to align 2D and 3D objects.
+            This example renders a sphere with an orthographic camera. Notice
+            how the symbols stay the same size even as they move into the background.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/potrace.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/potrace.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/potrace.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/potrace.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_potrace.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          With povray, we can project our vector graphics into a 3D
-          world and get beautiful, pixel-based images. If we want to
-          apply further vector transformations then we have to convert
-          the pixel-based images back into vector graphics and this is
-          exactly what 'potrace' does.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_potrace.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            With povray, we can project our vector graphics into a 3D
+            world and get beautiful, pixel-based images. If we want to
+            apply further vector transformations then we have to convert
+            the pixel-based images back into vector graphics and this is
+            exactly what 'potrace' does.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/default_cube.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/default_cube.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/default_cube.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/default_cube.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/blender_default_cube.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Blender is an amazingly powerful tool for 3D graphics and it is entirely
-          scriptable with Python. Reanimate offers built-in support for moving
-          vector graphics into Blender, running custom scripts, and then merging
-          the results back into an animation. The spinning cube to the left is
-          the famous Default Cube and represents the simplest scene possible.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/blender_default_cube.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Blender is an amazingly powerful tool for 3D graphics and it is entirely
+            scriptable with Python. Reanimate offers built-in support for moving
+            vector graphics into Blender, running custom scripts, and then merging
+            the results back into an animation. The spinning cube to the left is
+            the famous Default Cube and represents the simplest scene possible.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/blender.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/blender.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/blender.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/blender.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_blender.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Animated vector graphics are projected on to a 9-by-16 plane. This plane
-          is then morphed into a sphere and rotated. The blender script to achieve
-          this may appear fairly complex but was created using the blender GUI which
-          has a gentler learning curve.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/tut_glue_blender.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Animated vector graphics are projected on to a 9-by-16 plane. This plane
+            is then morphed into a sphere and rotated. The blender script to achieve
+            this may appear fairly complex but was created using the blender GUI which
+            has a gentler learning curve.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/fe_morph.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/fe_morph.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/fe_morph.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/fe_morph.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_morph.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Vector graphics (be they in 2D or 3D) can easily look cold and hard with
-          straight lines and mathematically defined curves being dominant. For a
-          more organic feel, SVG filter effects can be used to merge shapes and colors.
-        </p>
-      </div>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_morph.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Vector graphics (be they in 2D or 3D) can easily look cold and hard with
+            straight lines and mathematically defined curves being dominant. For a
+            more organic feel, SVG filter effects can be used to merge shapes and colors.
+          </p>
+        </div>
 
-      <div>
-        <video muted autoplay loop>
-          <source src="media/fe_bleed.mp4">
-        </video>
-        <video id="fourier" class="hidden large" muted loop>
-          <source src="media/fe_bleed.hd.mp4">
-        </video>
+        <div>
+          <video muted autoplay loop>
+            <source src="media/fe_bleed.mp4">
+          </video>
+          <video id="fourier" class="hidden large" muted loop>
+            <source src="media/fe_bleed.hd.mp4">
+          </video>
 
-        <p>
-          <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_bleed.hs">
-            <img src="external-link.svg" alt="View source code" align="right" />
-          </a>
-          Psychedelic Octopus Cat.<br />
-          Filter effects are powerful and versatile enough that the limiting
-          factor is imagination.
-        </p>
+          <p>
+            <a href="https://github.com/reanimate/reanimate/blob/master/examples/fe_bleed.hs">
+              <img src="external-link.svg" alt="View source code" align="right" />
+            </a>
+            Psychedelic Octopus Cat.<br />
+            Filter effects are powerful and versatile enough that the limiting
+            factor is imagination.
+          </p>
+        </div>
       </div>
 
       <script>
